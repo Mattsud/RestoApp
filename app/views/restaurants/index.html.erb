@@ -1,0 +1,12 @@
+<h1>Page d'accueil de l'application Resto</h1>
+<h2>Liste des différents restaurants</h2>
+
+<% @restaurants.each do |restaurant| %>
+<ul>Nom : <%= restaurant.name %>
+<li>Adresse : <%= restaurant.address %></li>
+<li>Numéro : <%= restaurant.phone %></li>
+<li> Type de cuisine : <%= restaurant.category %></li>
+</ul>
+<% end %>
+
+<%= link_to 'Add a restaurant', new_restaurant_path %>
