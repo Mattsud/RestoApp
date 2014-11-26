@@ -1,2 +1,9 @@
-<h1>Reviews#index</h1>
-<p>Find me in app/views/reviews/index.html.erb</p>
+<h1>Les reviews de ce restaurant</h1>
+
+<% @reviews.each do |review| %>
+<ul><li>Note : <%= review.rating %></li>
+<li>Commentaire : <%= review.content %></li>
+</ul>
+<% end %>
+
+<%= link_to 'Home', root_path %>
